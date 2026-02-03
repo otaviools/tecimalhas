@@ -1,0 +1,67 @@
+.tecidos-lista {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.tecidos-lista h2 {
+  margin-bottom: 40px;
+}
+
+.tecidos-lista ul {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px 20px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  overflow-x: auto;
+}
+
+.tecidos-lista li {
+  flex: 1;
+  min-height: 280px;
+  min-width: 280px;
+  max-width: 520px;
+}
+
+.tecidos-lista a {
+  display: block;
+}
+
+.tecidos-lista img {
+  margin-bottom: 16px;
+}
+
+.tecidos-lista h3 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.tecidos-lista h3::before {
+  content: "";
+  display: inline-block;
+  background-color: var(--cor-p3);
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  transition: width 0.2s;
+}
+
+.tecidos-lista a:hover h3::before {
+  width: 24px;
+}
+
+.tecidos-lista li span {
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .tecidos-lista {
+    padding-bottom: 60px;
+  }
+  .tecidos-lista ul {
+    gap: 20px;
+  }
+}
