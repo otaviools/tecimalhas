@@ -16,3 +16,7 @@
 
 /* Tecidos */
 @import "./tecidos/tecidos-lista.css";
+@import "./tecidos/tecidos.css";
+
+/* Termos */
+@import "./termos/termos.css";

@@ -19,6 +19,12 @@
   border-radius: 5px;
 }
 
+.diferencial-imagem {
+  position: relative;
+  max-width: 700px;
+  margin-right: -100px;
+}
+
 .diferencial-conteudo {
   padding-top: 140px;
   padding-bottom: 160px;

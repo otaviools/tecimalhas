@@ -20,6 +20,42 @@
     sans-serif;
 }
 
+.botao:hover {
+  background: linear-gradient(#25b444, #3abf57);
+}
+
+@media (max-width: 600px) {
+  .botao {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+}
+
+.botao.seta {
+  display: flex;
+  align-items: start;
+}
+
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 12px;
+  background: url(../../img/icones/seta.svg);
+  transition: transform 0.2s;
+}
+
+.botao.seta:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .botao.seta::after {
+    display: none;
+  }
+}
+
 .link {
   display: inline-block;
   color: var(--cor-p1);
@@ -41,12 +77,24 @@
   color: var(--cor-0);
 }
 
-.botao:hover {
-  background: linear-gradient(#25b444, #3abf57);
+.titulo-bg {
+  background-color: var(--cor-11);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-@media (max-width: 600px) {
-  .botao {
-    padding: 12px 16px;
+
+.titulo p {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 800px) {
+  .titulo-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .titulo p {
     font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
   }
 }

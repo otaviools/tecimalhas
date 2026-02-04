@@ -6,7 +6,7 @@
 .introducao {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0px 40px;
+  gap: 0px 100px;
 }
 .introducao-conteudo {
   align-self: end;
@@ -14,10 +14,17 @@
   max-width: 500px;
 }
 
+.introducao-imagem {
+  position: relative;
+  max-width: 565px;
+  margin-right: -100px;
+}
+
 .introducao img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: left;
   border-radius: 4px;
 }
 
@@ -41,6 +48,12 @@
   }
   .introducao-conteudo {
     padding-bottom: 0px;
+  }
+
+  .introducao-imagem {
+    position: relative;
+    max-width: 565px;
+    margin-right: 0;
   }
   .introducao h1 {
     margin-bottom: 16px;
