@@ -1,5 +1,5 @@
 .tecidos-lista {
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 120px;
 }
 
@@ -59,6 +59,7 @@
 
 @media (max-width: 800px) {
   .tecidos-lista {
+    padding-top: 60px;
     padding-bottom: 60px;
   }
   .tecidos-lista ul {

@@ -74,3 +74,96 @@
 .cor-p5 {
   color: var(--cor-p5);
 }
+
+@media (prefers-color-scheme: dark) {
+  .introducao-bg {
+    background: var(--cor-11) url("../../img/dec/bottom-left.svg") no-repeat
+      bottom 160px left 100px;
+    box-shadow: inset 0 -120px var(--cor-11) !important;
+  }
+  .tecidos-lista {
+    background: var(--cor-11);
+  }
+  .tecidos-lista h2 {
+    color: var(--cor-0);
+  }
+  .tecidos-lista h3 {
+    color: var(--cor-0);
+  }
+
+  .tecidos-lista span {
+    color: var(--cor-5);
+  }
+
+  .diferencial-bg {
+    background-color: var(--cor-12) !important;
+    box-shadow:
+      inset 0 80px var(--cor-11),
+      inset 0 -80px var(--cor-11) !important;
+  }
+
+  .parceiros {
+    background: var(--cor-11);
+  }
+
+  .parceiros h2 {
+    color: var(--cor-0);
+  }
+
+  .parceiros li {
+    border-left: 2px solid var(--cor-10) !important;
+  }
+  .parceiros li:nth-child(n + 5) {
+    border-top: 2px solid var(--cor-10) !important;
+  }
+
+  .titulo-bg {
+    background: var(--cor-12) !important;
+  }
+
+  .tecidos-bg {
+    background: var(--cor-11) !important;
+  }
+
+  .tecidos h2 {
+    color: var(--cor-0);
+  }
+
+  .tecidos p {
+    color: var(--cor-5);
+  }
+
+  .tecidos li {
+    color: var(--cor-5);
+  }
+
+  .tecidos-bg:nth-child(3) {
+    background: linear-gradient(
+      to right,
+      var(--cor-11) 32%,
+      var(--cor-12) 0
+    ) !important;
+  }
+
+  #local {
+    background: var(--cor-11) !important;
+  }
+  .loja-item {
+    background: var(--cor-10) !important;
+  }
+  .loja-dados {
+    color: var(--cor-6);
+    border-left: 2px solid var(--cor-6) !important;
+  }
+
+  .loja-conteudo > a {
+    color: var(--cor-0);
+  }
+
+  .loja-tempo {
+    color: var(--cor-0);
+  }
+
+  .loja-item > img {
+  }
+}
