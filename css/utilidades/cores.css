@@ -185,7 +185,7 @@
   .loja-item picture {
     display: block;
     line-height: 0;
-    background: var(--cor-10); /* mesma cor do background do card */
+    background: var(--cor-10);
   }
   .loja-dados {
     color: var(--cor-6);
