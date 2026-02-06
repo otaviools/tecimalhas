@@ -25,7 +25,8 @@
   margin: auto;
 }
 
-.parceiros li:first-child .parceiros li:nth-child(5) {
+.parceiros li:first-child,
+.parceiros li:nth-child(5) {
   border-left: none;
 }
 

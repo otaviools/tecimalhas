@@ -102,6 +102,13 @@
       inset 0 -80px var(--cor-11) !important;
   }
 
+  @media (max-width: 800px) {
+    .diferencial-bg {
+      box-shadow: none !important;
+      background-image: none !important;
+    }
+  }
+
   .parceiros {
     background: var(--cor-11);
   }
@@ -113,8 +120,25 @@
   .parceiros li {
     border-left: 2px solid var(--cor-10) !important;
   }
+
   .parceiros li:nth-child(n + 5) {
     border-top: 2px solid var(--cor-10) !important;
+  }
+
+  .parceiros li:first-child,
+  .parceiros li:nth-child(5) {
+    border-left: none !important;
+  }
+  @media (max-width: 800px) {
+    .parceiros li {
+      border-left: 2px solid var(--cor-10) !important;
+    }
+    .parceiros li:nth-child(n + 3) {
+      border-top: 2px solid var(--cor-10) !important;
+    }
+    .parceiros li:nth-child(odd) {
+      border-left: none !important;
+    }
   }
 
   .titulo-bg {
@@ -145,11 +169,23 @@
     ) !important;
   }
 
+  @media (max-width: 800px) {
+    .tecidos-bg:nth-child(3) {
+      background: var(--cor-12) !important;
+    }
+  }
+
   #local {
     background: var(--cor-11) !important;
   }
   .loja-item {
     background: var(--cor-10) !important;
+    overflow: hidden;
+  }
+  .loja-item picture {
+    display: block;
+    line-height: 0;
+    background: var(--cor-10); /* mesma cor do background do card */
   }
   .loja-dados {
     color: var(--cor-6);
@@ -163,7 +199,38 @@
   .loja-tempo {
     color: var(--cor-0);
   }
+  #contato {
+    background: linear-gradient(
+      var(--cor-12) 600px,
+      var(--cor-11) 0px
+    ) !important;
+  }
+  .contato-dados {
+    background: var(--cor-11) !important;
+  }
 
-  .loja-item > img {
+  .contato-formulario {
+    background: var(--cor-10) !important;
+  }
+
+  .form label {
+    color: var(--cor-1);
+  }
+
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+    color: var(--cor-0);
+    background: var(--cor-9) !important;
+    border: 1px solid var(--cor-10) !important;
+  }
+
+  .form input[type="text"]:focus,
+  .form input[type="email"]:focus,
+  .form textarea:focus {
+    outline: none;
+    border-color: var(--cor-p2) !important;
+    background: var(--cor-10) !important;
+    box-shadow: 0 0 0 2px var(--cor-p3);
   }
 }

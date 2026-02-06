@@ -66,6 +66,7 @@
 @media (max-width: 800px) {
   .diferencial-bg {
     box-shadow: none;
+    background-image: none;
   }
   .diferencial {
     grid-template-columns: 1fr;
@@ -86,5 +87,11 @@
 @media (max-width: 600px) {
   .diferencial-vantagens {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1600px) {
+  .diferencial-bg {
+    background-image: none;
   }
 }
