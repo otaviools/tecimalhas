@@ -78,7 +78,7 @@
 @media (prefers-color-scheme: dark) {
   html,
   body {
-    background-color: var(--cor-11) !important;
+    background-color: var(--cor-12) !important;
   }
   .introducao-bg {
     background: var(--cor-11) url("../../img/dec/bottom-left.svg") no-repeat
