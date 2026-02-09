@@ -99,6 +99,9 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  #termos .titulo {
+    background-image: none;
+  }
   .titulo p {
     font-size: 1rem;
     text-transform: lowercase;

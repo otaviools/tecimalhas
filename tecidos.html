@@ -8,11 +8,12 @@
   <title>Tecidos | Tecimalhas</title>
   <meta name="description" content="Tecidos e Malhas.">
   <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="./css/style.css" as="style">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@1,18..144,900&family=Poppins:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body id="tecidos">
@@ -40,7 +41,7 @@
     </div>
 
     <div class="tecidos-bg">
-      <div class="tecidos container">
+      <div class="tecidos container fadeInRight" data-anime="200">
         <div class="tecidos-imagem">
           <img src="./img/tecidos/laranja.jpg" width="1120" height="680" alt="Algodão">
           <span class="font-2-m cor-0">R$ 40,00m</span>
@@ -73,7 +74,7 @@
     </div>
 
     <div class="tecidos-bg">
-      <div class="tecidos container">
+      <div class="tecidos container fadeInRight" data-anime="400">
         <div class="tecidos-imagem">
           <img src="./img/tecidos/verde.jpg" width="1120" height="680" alt="Poliamida">
           <span class="font-2-m cor-0">R$ 35,00m</span>
@@ -106,7 +107,7 @@
     </div>
 
     <div class="tecidos-bg">
-      <div class="tecidos container">
+      <div class="tecidos container fadeInRight" data-anime="600">
         <div class="tecidos-imagem">
           <img src="./img/tecidos/praia.jpg" width="1120" height="680" alt="Moda Praia">
           <span class="font-2-m cor-0">R$ 25,00m</span>
@@ -177,5 +178,8 @@
       <p class="footer-copy font-2-m cor-6">Tecimalhas © Alguns Direitos Reservados.</p>
     </div>
   </footer>
+  <script src="./js/plugins/simple-anime.js"></script>
+  <script src="./js/script.js"></script>
+</body>
 
 </html>

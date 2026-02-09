@@ -7,11 +7,12 @@
   <title>Local | Tecimalhas</title>
   <meta name="description" content="Local Tecimalhas.">
   <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="./css/style.css" as="style">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@1,18..144,900&family=Poppins:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body id="local">
@@ -40,7 +41,7 @@
   </main>
 
   <article class="loja container">
-    <div class="loja-item">
+    <div class="loja-item fadeInLeft" data-anime="400">
       <picture>
         <source srcset="./img/loja/udia-preto.jpg" media="(prefers-color-scheme: dark)">
         <img src="./img/loja/udia-mg.jpg" width="1120" height="520" alt="mapa marcando o endereço em Av.Fernando Vilela 379 - Martins">
@@ -58,7 +59,7 @@
         <p class="loja-tempo font-1-s"><img src="./img/icones/relogio.svg" width="16" height="16" alt="">08-17:30h de Seg à sexta | sáb 08:30 às 12:00h</p>
       </div>
     </div>
-    <div class="loja-imagem">
+    <div class="loja-imagem fadeInRight" data-anime="200">
       <img src="./img/loja/interior.jpg" width="1120" height="992" alt="Interior Tecimalhas">
     </div>
   </article>
@@ -100,5 +101,9 @@
       <p class="footer-copy font-2-m cor-6">Tecimalhas © Alguns Direitos Reservados.</p>
     </div>
   </footer>
+  <script src="./js/plugins/simple-anime.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
 
 </html>

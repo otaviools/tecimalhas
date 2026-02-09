@@ -8,11 +8,13 @@
   <title>Tecimalhas - Moda e Qualidade</title>
   <meta name="description" content="Tecidos e malhas de alta qualidade e precisão. Crie, produza e transforme seus projetos com liberdade, variedade e excelência em cada detalhe.">
   <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="./css/style.css" as="style">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@1,18..144,900&family=Poppins:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body id="home">
@@ -34,11 +36,11 @@
   <main class="introducao-bg">
     <div class="introducao container">
       <div class="introducao-conteudo">
-        <h1 class="font-1-xxl cor-0">Tecidos e malhas sob medida<span class="cor-p1">.</span></h1>
-        <p class="font-2-l cor-5">Tecidos e malhas de alta qualidade e precisão. Crie, produza e transforme seus projetos com liberdade, variedade e excelência detalhada.</p>
-        <a class="botao" href="./tecidos.html">Explore o seu</a>
+        <h1 class="font-1-xxl cor-0 fadeInDown " data-anime="200">Tecidos e malhas sob medida<span class="cor-p1">.</span></h1>
+        <p class="font-2-l cor-5 fadeInDown " data-anime="400">Tecidos e malhas de alta qualidade e precisão. Crie, produza e transforme seus projetos com liberdade, variedade e excelência detalhada.</p>
+        <a class="botao fadeInDown " href="./tecidos.html" data-anime="600">Explore o seu</a>
       </div>
-      <picture>
+      <picture data-anime="800" class="fadeInDown ">
         <source media="(max-width: 800px)" srcset="./img/fotos/introducao.jpg">
         <img src="./img/fotos/introducao.jpg" width="1130" height="1600" alt="Tecido Poliamida">
       </picture>
@@ -164,6 +166,8 @@
       <p class="footer-copy font-2-m cor-6">Tecimalhas © Alguns Direitos Reservados.</p>
     </div>
   </footer>
+  <script src="./js/plugins/simple-anime.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
