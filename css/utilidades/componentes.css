@@ -53,6 +53,20 @@
   transform: translateX(4px);
 }
 
+.botao.sucesso {
+  background-image: none !important;
+  background-color: #ffcc00 !important;
+  color: #ff8f2b !important;
+  transition: all 0.3s ease !important;
+}
+
+.botao.erro {
+  background-image: none !important;
+  background-color: #dc3545 !important;
+  color: #9a0a0a !important;
+  transition: all 0.3s ease !important;
+}
+
 @media (max-width: 600px) {
   .botao.seta::after {
     display: none;
