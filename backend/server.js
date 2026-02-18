@@ -36,7 +36,7 @@ app.post("/api/contato", async (req, res) => {
     to: "tecimalhas@gmail.com",
     subject: `Novo Contato - ${nome}`,
     html: `
-            <h2>Novo contato recebido pelo Site</h2>
+            <h2>Novo Contato Recebido !</h2>
             <p><strong>Nome:</strong> ${nome}</p>
             <p><strong>Telefone:</strong> ${telefone}</p>
             <p><strong>Email:</strong> ${email}</p>
