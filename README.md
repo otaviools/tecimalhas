@@ -1,6 +1,6 @@
 # Tecimalhas 🧵
 
-Uma *landing page* moderna e responsiva desenvolvida para a **Tecimalhas**, uma loja especializada no comércio de tecidos e malhas sediada em Uberlândia, MG. O objetivo deste projeto é fornecer uma presença digital sólida, permitindo aos clientes explorar o catálogo de produtos e encontrar facilmente os canais de contato da empresa.
+Uma *landing page* moderna e responsiva desenvolvida para a **Tecimalhas**, uma loja especializada no comércio de tecidos e malhas sediada em Uberlândia-MG. O objetivo deste projeto é fornecer uma presença digital sólida, permitindo aos clientes explorar o catálogo de produtos e encontrar facilmente os canais de contato da empresa.
 
 ## 🚀 Demonstração
 
