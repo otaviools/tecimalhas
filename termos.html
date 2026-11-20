@@ -4,91 +4,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termos e Condições | Tecimalhas</title>
-  <meta name="description" content="Termos e condições.">
+  <title>Termos e condições — Tecimalhas</title>
+  <meta name="description" content="Termos e condições da Tecimalhas: pagamento, estorno, privacidade e cuidados com os tecidos.">
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="./css/style.min.css" as="style">
-  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@1,18..144,900&family=Poppins:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="./css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement, t;
+      d.classList.add("js");
+      try { t = localStorage.getItem("tema"); } catch (e) {}
+      if (t !== "claro" && t !== "escuro") t = matchMedia("(prefers-color-scheme: light)").matches ? "claro" : "escuro";
+      d.dataset.tema = t;
+    })();
+  </script>
 </head>
 
-<body id="termos">
-  <header class="header-bg" id="home">
-    <div class="header container">
-      <a class="logo" href="./"><img src="./img/tecimalhas.svg" width="160" height="44" alt="Tecimalhas">
-      </a>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
 
-      <nav aria-label="primaria">
-        <ul class="header-menu font-1-m cor-0">
+  <header class="header">
+    <div class="header-inner container">
+      <a class="logo" href="./" aria-label="Tecimalhas — início"><img class="logo-claro" src="./img/tecimalhas.svg" width="160" height="44" alt="Tecimalhas"><img class="logo-escuro" src="./img/tecimalhas-escuro.svg" width="160" height="44" alt="Tecimalhas"></a>
+      <span class="header-local mono">Uberlândia — MG</span>
+      <button class="tema-botao" type="button" aria-label="Ativar tema claro">
+        <svg class="tema-icone" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1a7 7 0 0 1 0 14z" fill="currentColor"/></svg>
+      </button>
+      <button class="menu-botao mono" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao-texto">Menu</span>
+        <span class="menu-botao-icone" aria-hidden="true"></span>
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Principal">
+        <ul class="header-menu">
           <li><a href="./tecidos.html">Tecidos</a></li>
           <li><a href="./local.html">Local</a></li>
           <li><a href="./contato.html">Contato</a></li>
         </ul>
+        <div class="menu-rodape mono">
+          <a href="tel:+553432101781">+55 34 3210-1781</a>
+          <span>Av. Fernando Vilela, 379 — Uberlândia, MG</span>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main>
-    <div class="titulo-bg">
-      <div class="titulo container">
-        <p class="font-2-l-b cor-5">Termos de Uso</p>
-        <h1 class="font-1-xxl cor-0">termos e condições<span class="cor-p3">.</span></h1>
+  <main id="conteudo">
+    <div class="pagina-topo">
+      <div class="container pagina-topo-grid">
+        <div>
+          <p class="mono rotulo">Termos de uso</p>
+          <h1 class="display" data-revela="linhas">
+            <span class="linha"><span style="--i:0">Termos e</span></span>
+            <span class="linha"><span style="--i:1">condições<span class="ponto-verde">.</span></span></span>
+          </h1>
+        </div>
+        <p class="pagina-topo-nota mono">Pagamento, estorno, privacidade e cuidados com os tecidos</p>
       </div>
     </div>
-    <div class="termos font-2-s cor-10 container">
-      <h2 class="font-1-l cor-11">1. Política de estorno</h2>
-      <p>1.1 Aceitamos cartões de crédito e débito com as bandeiras: Visa, Mastercard, ELO e American Express. Pagamentos à vista também aceitamos Pix e Boleto.</p>
-      <p>1.2 De acordo com as normas comerciais, não aceitamos devolução por arrependimento de tecidos já cortados (exceto em casos de defeito de fabricação ou vício oculto), visto que o corte inviabiliza a venda do produto para outro cliente na mesma metragem original.</p>
-      <h2 class="font-1-l cor-11">2. Privacidade e Uso de Dados </h2>
-      <p>2.1 Respeitamos a sua privacidade. Os dados coletados (Nome, Telefone e E-mail) são utilizados estritamente para o processamento das vendas, emissão de notas fiscais e contato direto. As informações não serão comercializadas ou repassadas a terceiros sem a sua autorização prévia.</p>
-      <h2 class="font-1-l cor-11">3. Tecidos</h2>
-      <p>3.1. Variação de Tonalidade e Lotes As imagens dos tecidos em nosso site buscam a maior fidelidade possível à realidade. No entanto, podem ocorrer variações de tonalidade devido às configurações de brilho e cor de cada monitor ou tela de celular. Além disso, tecidos de lotes diferentes podem apresentar leves diferenças de nuance. Recomendamos comprar a metragem total necessária de uma única vez para garantir o mesmo lote de tingimento.</p>
-      <p>3.2. Produtos Cortados e Medidas Os tecidos são vendidos por metro linear e cortados na medida solicitada pelo cliente. Por se tratar de um produto personalizado pelo corte (fracionado exclusivamente para o seu pedido), não aceitamos devolução ou troca por arrependimento após o tecido ter sido cortado, exceto em casos de defeito de fabricação comprovado antes do uso.</p>
-      <p>3.3. Encolhimento e Cuidados Prévios Tecidos compostos por fibras naturais (como Algodão, Linho e Viscose) possuem uma taxa natural de encolhimento de 5% a 10% após a primeira lavagem. Recomendamos molhar o tecido antes de realizar o corte e a costura. A loja não se responsabiliza por peças que encolheram após a confecção caso este procedimento prévio não tenha sido respeitado.</p>
+
+    <div class="termos">
+      <div class="container termos-grid">
+        <nav class="termos-indice mono" aria-label="Seções dos termos">
+          <a href="#estorno">01 — Política de estorno</a>
+          <a href="#privacidade">02 — Privacidade e uso de dados</a>
+          <a href="#tecidos">03 — Tecidos</a>
+        </nav>
+
+        <div class="termos-texto">
+          <section>
+            <h2 class="titulo-m" id="estorno"><span class="mono">01</span>Política de estorno</h2>
+            <p><strong>1.1</strong> Aceitamos cartões de crédito e débito com as bandeiras Visa, Mastercard, Elo e American Express. Para pagamentos à vista, também aceitamos Pix e boleto.</p>
+            <p><strong>1.2</strong> De acordo com as normas comerciais, não aceitamos devolução por arrependimento de tecidos já cortados (exceto em casos de defeito de fabricação ou vício oculto), visto que o corte inviabiliza a venda do produto para outro cliente na mesma metragem original.</p>
+          </section>
+
+          <section>
+            <h2 class="titulo-m" id="privacidade"><span class="mono">02</span>Privacidade e uso de dados</h2>
+            <p><strong>2.1</strong> Respeitamos a sua privacidade. Os dados coletados (nome, telefone e e-mail) são utilizados estritamente para o processamento das vendas, emissão de notas fiscais e contato direto. As informações não serão comercializadas ou repassadas a terceiros sem a sua autorização prévia.</p>
+          </section>
+
+          <section>
+            <h2 class="titulo-m" id="tecidos"><span class="mono">03</span>Tecidos</h2>
+            <p><strong>3.1 Variação de tonalidade e lotes.</strong> As imagens dos tecidos em nosso site buscam a maior fidelidade possível à realidade. No entanto, podem ocorrer variações de tonalidade devido às configurações de brilho e cor de cada monitor ou tela de celular. Além disso, tecidos de lotes diferentes podem apresentar leves diferenças de nuance. Recomendamos comprar a metragem total necessária de uma única vez para garantir o mesmo lote de tingimento.</p>
+            <p><strong>3.2 Produtos cortados e medidas.</strong> Os tecidos são vendidos por metro linear e cortados na medida solicitada pelo cliente. Por se tratar de um produto personalizado pelo corte (fracionado exclusivamente para o seu pedido), não aceitamos devolução ou troca por arrependimento após o tecido ter sido cortado, exceto em casos de defeito de fabricação comprovado antes do uso.</p>
+            <p><strong>3.3 Encolhimento e cuidados prévios.</strong> Tecidos compostos por fibras naturais (como algodão, linho e viscose) possuem uma taxa natural de encolhimento de 5% a 10% após a primeira lavagem. Recomendamos molhar o tecido antes de realizar o corte e a costura. A loja não se responsabiliza por peças que encolheram após a confecção caso este procedimento prévio não tenha sido respeitado.</p>
+          </section>
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer class="footer-bg">
-    <div class="footer container">
-      <a href="#home"><img src="./img/tecimalhas.svg" width="160" height="44" alt="Tecimalhas"></a>
-      <div class="footer-contato">
-        <h3 class="font-2-l-b cor-0">Contato</h3>
-        <ul class=" font-2-m cor-5">
-          <li><a href="tel:+55343210-1781">+55 34 3210-1781</a></li>
+  <footer class="footer">
+    <div class="footer-grid container">
+      <div class="footer-cta">
+        <p class="mono suave">Ficou alguma dúvida?</p>
+        <a class="titulo-l link-seta" href="./contato.html">Fale com a gente
+          <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+      <div>
+        <h2 class="mono">Contato</h2>
+        <ul>
+          <li><a href="tel:+553432101781">+55 34 3210-1781</a></li>
           <li><a href="mailto:tecimalhas@gmail.com">tecimalhas@gmail.com</a></li>
-          <li>Av. Fernando Vilela, 379 - Martins</li>
-          <li>Uberlândia- MG</li>
         </ul>
-        <div class="footer-redes">
-          <a href="./">
-            <img src="./img/redes-sociais/instagram.svg" width="32" height="32" alt="Instagram">
-          </a>
-          <a href="./">
-            <img src="./img/redes-sociais/facebook.svg" width="32" height="32" alt="Facebook">
-          </a>
-          <a href="./">
-            <img src="./img/redes-sociais/youtube.svg" width="32" height="32" alt="Youtube">
-          </a>
-        </div>
       </div>
-      <div class="footer-informacoes">
-        <h3 class="font-2-l-b cor-0">Informações</h3>
-        <nav>
-          <ul class="font-1-m cor-5">
-            <li><a href="./tecidos.html">Tecidos</a></li>
-            <li><a href="./local.html">Local</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="./termos.html">Termos e Condições</a></li>
-          </ul>
-        </nav>
+      <div>
+        <h2 class="mono">Loja</h2>
+        <address>Av. Fernando Vilela, 379<br>Martins — Uberlândia, MG</address>
       </div>
-      <p class="footer-copy font-2-m cor-6">Tecimalhas © Alguns Direitos Reservados.</p>
+      <nav aria-label="Rodapé">
+        <h2 class="mono">Navegação</h2>
+        <ul>
+          <li><a href="./tecidos.html">Tecidos</a></li>
+          <li><a href="./local.html">Local</a></li>
+          <li><a href="./contato.html">Contato</a></li>
+          <li><a href="./termos.html">Termos e condições</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-marca" aria-hidden="true">tecimalhas<span>.</span></p>
+    <div class="footer-base container mono">
+      <span>© <span data-ano>2026</span> Tecimalhas</span>
+      <a href="#conteudo">Voltar ao topo ↑</a>
     </div>
   </footer>
-  <script src="./js/script.js"></script>
+
+  <script src="./js/script.js" defer></script>
 </body>
 
 </html>

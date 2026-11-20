@@ -1,63 +1,59 @@
-// Script para envio do formulário de contato
-document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.querySelector("form");
+// Formulário de contato
+const formulario = document.querySelector(".form");
 
-  if (formulario) {
-    formulario.addEventListener("submit", async (e) => {
-      e.preventDefault();
+if (formulario) {
+  const botao = formulario.querySelector('button[type="submit"]');
+  const rotulo = botao.querySelector("[data-rotulo]");
+  const textoOriginal = rotulo.textContent;
+  const mensagem = formulario.querySelector("#mensagem");
 
-      const botao = formulario.querySelector('button[type="submit"]');
-      const textoOriginal = botao.textContent;
-
-      // Coleta os dados do formulário
-      const dados = {
-        nome: formulario.querySelector('input[id="nome"]').value,
-        telefone: formulario.querySelector('input[id="telefone"]').value,
-        email: formulario.querySelector('input[id="email"]').value,
-        mensagem: formulario.querySelector('textarea[id="mensagem"]').value,
-      };
-
-      // Desabilita o botão durante o envio
-      botao.disabled = true;
-      botao.textContent = "Enviando...";
-
-      try {
-        const resposta = await fetch("http://localhost:3000/api/contato", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(dados),
-        });
-
-        const resultado = await resposta.json();
-
-        if (resposta.ok) {
-          botao.classList.add("sucesso");
-          botao.textContent = "Enviado!";
-          formulario.reset();
-
-          setTimeout(() => {
-            botao.classList.remove("sucesso");
-            botao.textContent = textoOriginal;
-            botao.disabled = false;
-          }, 4000);
-        } else {
-          botao.classList.add("erro");
-          botao.textContent = resultado.erro || "Erro ao enviar";
-
-          setTimeout(() => {
-            botao.classList.remove("erro");
-            botao.textContent = textoOriginal;
-            botao.disabled = false;
-          }, 3000);
-        }
-      } catch (erro) {
-        console.error("Erro:", erro);
-        alert("Erro ao enviar mensagem. Verifique se o servidor está rodando.");
-        botao.disabled = false;
-        botao.textContent = textoOriginal;
-      }
-    });
+  // Vindo de "Solicitar orçamento" na página de tecidos: já preenche o assunto
+  const tecido = new URLSearchParams(location.search).get("tecido");
+  if (tecido && !mensagem.value) {
+    mensagem.value = `Olá! Gostaria de um orçamento de ${tecido.slice(0, 40)}.\nCor: \nMetragem: `;
   }
-});
+
+  function mostrarEstado(classe, texto, duracao) {
+    botao.classList.add(classe);
+    rotulo.textContent = texto;
+    setTimeout(() => {
+      botao.classList.remove(classe);
+      rotulo.textContent = textoOriginal;
+      botao.disabled = false;
+    }, duracao);
+  }
+
+  formulario.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const dados = {
+      nome: formulario.nome.value,
+      telefone: formulario.telefone.value,
+      email: formulario.email.value,
+      mensagem: mensagem.value,
+    };
+
+    botao.disabled = true;
+    rotulo.textContent = "Enviando...";
+
+    try {
+      const resposta = await fetch("http://localhost:3000/api/contato", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados),
+      });
+
+      const resultado = await resposta.json().catch(() => ({}));
+
+      if (resposta.ok) {
+        formulario.reset();
+        mostrarEstado("sucesso", "Mensagem enviada", 4000);
+      } else {
+        mostrarEstado("erro", resultado.erro || "Erro ao enviar", 3000);
+      }
+    } catch (erro) {
+      console.error("Erro:", erro);
+      mostrarEstado("erro", "Servidor indisponível. Tente pelo telefone.", 4000);
+    }
+  });
+}
